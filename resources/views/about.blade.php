@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Halaman About</h1>
-    <img src="img/sparrow.jpg" alt="jack sparrow" width="200">
+    <p><?= $name; ?></p>
+    <img src="img/<?= $image; ?>" alt="<?= $name; ?>" width="200">
 </body>
 </html>
