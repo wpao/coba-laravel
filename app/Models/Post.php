@@ -9,6 +9,6 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'excerpt', 'body']; //yang boleh diisi
-    // protected $guarded = ['id']; //yang tidak boleh di isi
+    // protected $fillable = ['title', 'excerpt', 'body']; //yang boleh diisi
+    protected $guarded = ['id']; //yang tidak boleh di isi
 }
