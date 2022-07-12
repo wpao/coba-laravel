@@ -16,13 +16,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
 
-        User::create([
-            'name' => 'Sandhika Galih',
-            'email' => 'sandhikagalih@gmail.com',
-            'password' => bcrypt('123456')
-        ]);
+        // User::create([
+        //     'name' => 'Sandhika Galih',
+        //     'email' => 'sandhikagalih@gmail.com',
+        //     'password' => bcrypt('123456')
+        // ]);
+
+        User::factory(3)->create();
 
         Category::create([
             'name' => 'Web Programming',
@@ -34,38 +35,40 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
 
-        Post::create([
-            'title' => 'Judul Pertama',
-            'slug' => 'judul-pertama',
-            'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
+        Post::factory(20)->create();
 
-        Post::create([
-            'title' => 'Judul Ke Dua',
-            'slug' => 'judul-ke-dua',
-            'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
-        Post::create([
-            'title' => 'Judul Ke Tiga',
-            'slug' => 'judul-ke-tiga',
-            'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'category_id' => 2,
-            'user_id' => 1
-        ]);
-        Post::create([
-            'title' => 'Judul Ke Empat',
-            'slug' => 'judul-ke-empat',
-            'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
-            'category_id' => 2,
-            'user_id' => 1
-        ]);
+        // Post::create([
+        //     'title' => 'Judul Pertama',
+        //     'slug' => 'judul-pertama',
+        //     'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+
+        // Post::create([
+        //     'title' => 'Judul Ke Dua',
+        //     'slug' => 'judul-ke-dua',
+        //     'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+        // Post::create([
+        //     'title' => 'Judul Ke Tiga',
+        //     'slug' => 'judul-ke-tiga',
+        //     'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'category_id' => 2,
+        //     'user_id' => 1
+        // ]);
+        // Post::create([
+        //     'title' => 'Judul Ke Empat',
+        //     'slug' => 'judul-ke-empat',
+        //     'excerpt' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'body' => 'lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.',
+        //     'category_id' => 2,
+        //     'user_id' => 1
+        // ]);
     }
 }
