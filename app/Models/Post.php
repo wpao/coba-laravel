@@ -13,6 +13,14 @@ class Post extends Model
     protected $guarded = ['id']; //yang tidak boleh di isi
     protected $with = ['category', 'author']; //untuk mengambil data yang lainnya
 
+    public function scopeFilter($query)
+    {
+        if (request()->has('search')) {
+            return $query->where('title', 'like', '%' . request('search') . '%')
+                ->orWhere('body', 'like', '%' . request('search') . '%');
+        }
+    }
+
     /**
      * Post dapat memiliki satu category
      */
