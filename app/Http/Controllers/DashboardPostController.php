@@ -14,7 +14,7 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
-        // return Post::where('user_id', auth()->user()->id)->get(); // get all posts by current user
+        return Post::where('user_id', auth()->user()->id)->get(); // get all posts by current user
         return view('dashboard.posts.index', [
             'posts' => Post::where('user_id', auth()->user()->id)->get()
         ]);
@@ -49,11 +49,11 @@ class DashboardPostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('dashboard.posts.show', [
-            'title' => 'Post Detaillllll',
-            'active' => 'posts',
-            'post' => $post
-        ]);
+        return $post->all();
+        // return view('dashboard.posts.show', [
+        //     'active' => 'posts',
+        //     'post' => $post
+        // ]);
     }
 
     /**
